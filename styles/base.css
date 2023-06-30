@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .form {
+        @apply border-b border-gray-900/10 pb-9 mx-auto w-[900px];
+    }
+
+    .form h2 {
+        @apply text-base font-semibold leading-7 text-gray-900;
+    }
+
+    .form p {
+        @apply mt-1 text-sm leading-6 text-gray-600;
+    }
+
+    .form-row {
+        @apply mt-10 grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2;
+    }
+
+    .form label {
+        @apply block text-sm font-medium leading-6 text-gray-900 ml-1;
+    }
+
+    .form-control {
+        @apply block w-full rounded-md border-0 py-2 px-3 text-gray-900 shadow-sm ring-1 ring-inset 
+        ring-gray-300 placeholder:text-gray-400 focus:outline-none sm:text-sm sm:leading-6;
+    }
+
+    select.form-control {
+        @apply block w-full rounded-md border-0 py-2 px-2 h-[40px] text-gray-900 shadow-sm ring-1 ring-inset 
+        ring-gray-300 focus:ring-2 focus:outline-none sm:text-sm sm:leading-6;
+    }
+
+    .form-control.invalid {
+        @apply border-[#ef4444] border;
+    }
+
+    .row-btns {
+        @apply flex justify-end mt-8;
+    }
+
+    .btn {
+        @apply rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 
+        focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600;
+    }
+
+    .btn-cancel {
+        @apply  bg-gray-200 hover:bg-gray-100 focus-visible:outline-gray-100 text-gray-900 mr-2;
+    }
+
+    .form-error {
+        @apply text-[#ef4444] text-sm ml-1;
+    }
+
+    .form-clean .form-error {
+        @apply hidden;
+    }
+
+    .form-clean .form-control.invalid {
+        @apply border-0;
+    }
+}
